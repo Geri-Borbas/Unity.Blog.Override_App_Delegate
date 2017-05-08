@@ -1,0 +1,288 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 46;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		552856361EBE63190043CD02 /* Override_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856351EBE63190043CD02 /* Override_iOS.h */; };
+		5528563F1EBE652C0043CD02 /* libOverride_iOS.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* libOverride_iOS.a */; };
+		554BE3B71EBE779F00EB767C /* UnityString_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554BE3B61EBE779F00EB767C /* UnityString_C++.mm */; };
+		554BE3BB1EBE782D00EB767C /* Override_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554BE3B91EBE782D00EB767C /* Override_C++.mm */; };
+		554BE3BD1EBE7DDC00EB767C /* libOverride_iOS.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* libOverride_iOS.a */; };
+		55526F331EBFF1D300A02158 /* Override_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 552856371EBE63190043CD02 /* Override_iOS.m */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXCopyFilesBuildPhase section */
+		552856301EBE63180043CD02 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "include/$(PRODUCT_NAME)";
+			dstSubfolderSpec = 16;
+			files = (
+				552856361EBE63190043CD02 /* Override_iOS.h in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		5528563E1EBE64F50043CD02 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Projects/Unity/Blog/Override_App_Delegate/Assets/Plugins";
+			dstSubfolderSpec = 0;
+			files = (
+				5528563F1EBE652C0043CD02 /* libOverride_iOS.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		554BE3BC1EBE7DD100EB767C /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = "~/Projects/Unity/Blog/Override_App_Delegate/Build/iOS/Override/Libraries/Plugins";
+			dstSubfolderSpec = 0;
+			files = (
+				554BE3BD1EBE7DDC00EB767C /* libOverride_iOS.a in CopyFiles */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXCopyFilesBuildPhase section */
+
+/* Begin PBXFileReference section */
+		552856321EBE63180043CD02 /* libOverride_iOS.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libOverride_iOS.a; sourceTree = BUILT_PRODUCTS_DIR; };
+		552856351EBE63190043CD02 /* Override_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Override_iOS.h; sourceTree = "<group>"; };
+		552856371EBE63190043CD02 /* Override_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Override_iOS.m; sourceTree = "<group>"; };
+		554BE3B61EBE779F00EB767C /* UnityString_C++.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UnityString_C++.mm"; sourceTree = "<group>"; };
+		554BE3B91EBE782D00EB767C /* Override_C++.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Override_C++.mm"; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		5528562F1EBE63180043CD02 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		552856291EBE63180043CD02 = {
+			isa = PBXGroup;
+			children = (
+				552856341EBE63180043CD02 /* Override_iOS */,
+				552856331EBE63180043CD02 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		552856331EBE63180043CD02 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				552856321EBE63180043CD02 /* libOverride_iOS.a */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		552856341EBE63180043CD02 /* Override_iOS */ = {
+			isa = PBXGroup;
+			children = (
+				552856351EBE63190043CD02 /* Override_iOS.h */,
+				552856371EBE63190043CD02 /* Override_iOS.m */,
+				554BE3B91EBE782D00EB767C /* Override_C++.mm */,
+				554BE3B61EBE779F00EB767C /* UnityString_C++.mm */,
+			);
+			path = Override_iOS;
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		552856311EBE63180043CD02 /* Override_iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 5528563B1EBE63190043CD02 /* Build configuration list for PBXNativeTarget "Override_iOS" */;
+			buildPhases = (
+				5528562E1EBE63180043CD02 /* Sources */,
+				5528562F1EBE63180043CD02 /* Frameworks */,
+				552856301EBE63180043CD02 /* CopyFiles */,
+				5528563E1EBE64F50043CD02 /* CopyFiles */,
+				554BE3BC1EBE7DD100EB767C /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = Override_iOS;
+			productName = Override_iOS;
+			productReference = 552856321EBE63180043CD02 /* libOverride_iOS.a */;
+			productType = "com.apple.product-type.library.static";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		5528562A1EBE63180043CD02 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				LastUpgradeCheck = 0730;
+				ORGANIZATIONNAME = "eppz!";
+				TargetAttributes = {
+					552856311EBE63180043CD02 = {
+						CreatedOnToolsVersion = 7.3.1;
+					};
+				};
+			};
+			buildConfigurationList = 5528562D1EBE63180043CD02 /* Build configuration list for PBXProject "Override_iOS" */;
+			compatibilityVersion = "Xcode 3.2";
+			developmentRegion = English;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+			);
+			mainGroup = 552856291EBE63180043CD02;
+			productRefGroup = 552856331EBE63180043CD02 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				552856311EBE63180043CD02 /* Override_iOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXSourcesBuildPhase section */
+		5528562E1EBE63180043CD02 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				55526F331EBFF1D300A02158 /* Override_iOS.m in Sources */,
+				554BE3B71EBE779F00EB767C /* UnityString_C++.mm in Sources */,
+				554BE3BB1EBE782D00EB767C /* Override_C++.mm in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin XCBuildConfiguration section */
+		552856391EBE63190043CD02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SDKROOT = iphoneos;
+			};
+			name = Debug;
+		};
+		5528563A1EBE63190043CD02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++0x";
+				CLANG_CXX_LIBRARY = "libc++";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu99;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				IPHONEOS_DEPLOYMENT_TARGET = 9.3;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				SDKROOT = iphoneos;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		5528563C1EBE63190043CD02 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Debug;
+		};
+		5528563D1EBE63190043CD02 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				OTHER_LDFLAGS = "-ObjC";
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SKIP_INSTALL = YES;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		5528562D1EBE63180043CD02 /* Build configuration list for PBXProject "Override_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				552856391EBE63190043CD02 /* Debug */,
+				5528563A1EBE63190043CD02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		5528563B1EBE63190043CD02 /* Build configuration list for PBXNativeTarget "Override_iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				5528563C1EBE63190043CD02 /* Debug */,
+				5528563D1EBE63190043CD02 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 5528562A1EBE63180043CD02 /* Project object */;
+}

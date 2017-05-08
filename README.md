@@ -1,0 +1,1 @@
+Example project for **Override app delegate in Unity for iOS and OSX** tutorial series. Read (much) more on [**Override app delegate in Unity for iOS and OSX (1/4)** Plugin workflow](http://eppz.eu/blog/override-app-delegate-unity-ios-osx-1/).
