@@ -13,13 +13,30 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
+#import "Override_iOS.h"
 
 
 @interface OverrideAppDelegate : NSObject
 
 
 -(BOOL)application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions;
--(BOOL)_original_saved_by_Override_application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions;
+-(BOOL)application:(UIApplication*) application
+           openURL:(NSURL*) url
+           options:(NSDictionary<NSString*, id>*) options;
+-(BOOL)application:(UIApplication*) application
+           openURL:(NSURL*) url
+ sourceApplication:(NSString*) sourceApplication
+        annotation:(id) annotation;
+
+-(BOOL)_original_saved_by_Override_application:(UIApplication*) application
+                 didFinishLaunchingWithOptions:(NSDictionary*) launchOptions;
+-(BOOL)_original_saved_by_Override_application:(UIApplication*) application
+                                       openURL:(NSURL*) url
+                                       options:(NSDictionary<NSString*, id>*) options;
+-(BOOL)_original_saved_by_Override_application:(UIApplication*) application
+                                       openURL:(NSURL*) url
+                             sourceApplication:(NSString*) sourceApplication
+                                    annotation:(id) annotation;
 
 
 @end
