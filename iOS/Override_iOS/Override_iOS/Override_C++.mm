@@ -20,7 +20,7 @@ extern "C"
 
     
     const char* getMessage()
-    { return UnityStringFromNSString(@"Greetings from iOS!"); }
+    { return UnityStringFromNSString([[Override_iOS instance] URL]); }
     
     
 }

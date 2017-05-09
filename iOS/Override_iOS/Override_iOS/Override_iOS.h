@@ -12,7 +12,14 @@
 //
 
 #import <Foundation/Foundation.h>
+#import <UIKit/UIKit.h>
 
 
 @interface Override_iOS : NSObject
+
+
+@property (nonatomic, strong) NSString *URL;
++(Override_iOS*)instance;
+
+
 @end
