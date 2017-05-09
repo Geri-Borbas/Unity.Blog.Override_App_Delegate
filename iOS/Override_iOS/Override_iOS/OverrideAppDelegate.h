@@ -1,5 +1,5 @@
 //
-// Copyright (c) 2017 eppz! mobile, Gergely Borbás (SP)
+// Copyright (c) 2016 eppz! mobile, Gergely Borbás (SP)
 //
 // http://www.twitter.com/_eppz
 //
@@ -13,15 +13,13 @@
 
 #import <Foundation/Foundation.h>
 #import <UIKit/UIKit.h>
-#import "EPPZSwizzler.h"
-#import "OverrideAppDelegate.h"
 
 
-@interface Override_iOS : NSObject
+@interface OverrideAppDelegate : NSObject
 
 
-@property (nonatomic, strong) NSString *URL;
-+(Override_iOS*)instance;
+-(BOOL)application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions;
+-(BOOL)_original_saved_by_Override_application:(UIApplication*) application didFinishLaunchingWithOptions:(NSDictionary*) launchOptions;
 
 
 @end
