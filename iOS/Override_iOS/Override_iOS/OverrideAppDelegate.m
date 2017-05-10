@@ -31,6 +31,9 @@
            options:(NSDictionary<NSString*, id>*) options
 {
     NSLog(@"[OverrideAppDelegate application:%@ openURL:%@ options:%@]", application, url, options);
+    [DeepLink instance].URL = url.absoluteString;
+    [DeepLink instance].sourceAppliaction = options[UIApplicationOpenURLOptionsSourceApplicationKey];
+    [DeepLink instance].annotation = options[UIApplicationOpenURLOptionsAnnotationKey];
     return [self _original_saved_by_Override_application:application
                                                  openURL:url
                                                  options:options];
@@ -42,6 +45,9 @@
         annotation:(id) annotation
 {
     NSLog(@"[OverrideAppDelegate application:%@ openURL:%@ sourceApplication:%@ annotation:%@]", application, url, sourceApplication, annotation);
+    [DeepLink instance].URL = url.absoluteString;
+    [DeepLink instance].sourceAppliaction = sourceApplication;
+    [DeepLink instance].annotation = annotation;
     return [self _original_saved_by_Override_application:application
                                                  openURL:url
                                        sourceApplication:sourceApplication

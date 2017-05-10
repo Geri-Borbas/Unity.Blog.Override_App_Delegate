@@ -282,7 +282,6 @@ GameObject:
   - component: {fileID: 965650478}
   - component: {fileID: 965650480}
   - component: {fileID: 965650479}
-  - component: {fileID: 965650481}
   m_Layer: 5
   m_Name: Bottom
   m_TagString: Untagged
@@ -329,38 +328,65 @@ MonoBehaviour:
       Version=1.0.0.0, Culture=neutral, PublicKeyToken=null
   m_FontData:
     m_Font: {fileID: 12800000, guid: eaf6ebecc70a24a08bcf6fdfd75e4af7, type: 3}
-    m_FontSize: 148
+    m_FontSize: 260
     m_FontStyle: 0
     m_BestFit: 0
     m_MinSize: 1
-    m_MaxSize: 259
+    m_MaxSize: 300
     m_Alignment: 4
     m_AlignByGeometry: 0
     m_RichText: 1
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: 'Welcome
-
-    message!'
+  m_Text: 
 --- !u!222 &965650480
 CanvasRenderer:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
   m_GameObject: {fileID: 965650477}
---- !u!114 &965650481
+--- !u!1 &1209443202
+GameObject:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  serializedVersion: 5
+  m_Component:
+  - component: {fileID: 1209443204}
+  - component: {fileID: 1209443203}
+  m_Layer: 0
+  m_Name: DeepLink
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!114 &1209443203
 MonoBehaviour:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
   m_PrefabInternal: {fileID: 0}
-  m_GameObject: {fileID: 965650477}
+  m_GameObject: {fileID: 1209443202}
   m_Enabled: 1
   m_EditorHideFlags: 0
   m_Script: {fileID: 11500000, guid: cb73512c827624a5b8aa148dd5d9d973, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
   label: {fileID: 965650479}
+--- !u!4 &1209443204
+Transform:
+  m_ObjectHideFlags: 0
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 0}
+  m_GameObject: {fileID: 1209443202}
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_Children: []
+  m_Father: {fileID: 0}
+  m_RootOrder: 4
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!1 &1288652115
 GameObject:
   m_ObjectHideFlags: 0
@@ -553,7 +579,7 @@ MonoBehaviour:
     m_HorizontalOverflow: 0
     m_VerticalOverflow: 0
     m_LineSpacing: 0.8
-  m_Text: Hey, plugin!
+  m_Text: Deep link
 --- !u!222 &1851320519
 CanvasRenderer:
   m_ObjectHideFlags: 0

@@ -11,11 +11,36 @@
 // OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-#import <Foundation/Foundation.h>
-#import <UIKit/UIKit.h>
-#import "EPPZSwizzler.h"
-#import "OverrideAppDelegate.h"
+#import "DeepLink.h"
 
 
-@interface Override_iOS : NSObject
+__strong DeepLink *_instance;
+
+
+@implementation DeepLink
+
+
++(void)load
+{
+    NSLog(@"[DeepLink load]");
+    _instance = [DeepLink new];
+}
+
++(DeepLink*)instance
+{ return _instance; }
+
+-(instancetype)init
+{
+    self = [super init];
+    if (self) [self reset];
+    return self;
+}
+
+-(void)reset
+{
+    self.URL = [NSString new];
+    self.sourceAppliaction = [NSString new];
+    self.annotation = [NSDictionary new];
+}
+
 @end

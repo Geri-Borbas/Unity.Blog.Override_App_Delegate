@@ -1,5 +1,5 @@
-﻿//
-// Copyright (c) 2016 eppz! mobile, Gergely Borbás (SP)
+//
+// Copyright (c) 2017 eppz! mobile, Gergely Borbás (SP)
 //
 // http://www.twitter.com/_eppz
 //
@@ -11,27 +11,18 @@
 // OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using UnityEngine;
-using UnityEngine.UI;
-using System.Runtime.InteropServices;
+#import <Foundation/Foundation.h>
 
 
-public class Override : MonoBehaviour
-{
+@interface DeepLink : NSObject
 
 
-	public Text label;
+@property (nonatomic, strong) NSString *URL;
+@property (nonatomic, strong) NSString *sourceAppliaction;
+@property (nonatomic, strong) id annotation;
+
++(DeepLink*)instance;
+-(void)reset;
 
 
-#if !UNITY_EDITOR && UNITY_IOS
-
-	[DllImport("__Internal")]
-	static extern string getMessage();
-
-	void Awake()
-	{ label.text = getMessage(); }
-
-#endif
-
-
-}
+@end

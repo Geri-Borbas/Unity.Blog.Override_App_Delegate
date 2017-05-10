@@ -12,15 +12,21 @@
 //
 
 #import "UnityString_C++.mm"
-#import "Override_iOS.h"
+#import "DeepLink.h"
 
 
 extern "C"
 {
-
     
-    const char* getMessage()
-    { return UnityStringFromNSString([[Override_iOS instance] URL]); }
+
+    void DeepLink_Reset()
+    { return [[DeepLink instance] reset]; }
+    
+    const char* DeepLink_GetURL()
+    { return UnityStringFromNSString([[DeepLink instance] URL]); }
+    
+    const char* DeepLink_GetSourceApplication()
+    { return UnityStringFromNSString([[DeepLink instance] sourceAppliaction]); }
     
     
 }

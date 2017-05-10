@@ -10,9 +10,10 @@
 		552856361EBE63190043CD02 /* Override_iOS.h in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856351EBE63190043CD02 /* Override_iOS.h */; };
 		5528563F1EBE652C0043CD02 /* libOverride_iOS.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* libOverride_iOS.a */; };
 		554BE3B71EBE779F00EB767C /* UnityString_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554BE3B61EBE779F00EB767C /* UnityString_C++.mm */; };
-		554BE3BB1EBE782D00EB767C /* Override_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 554BE3B91EBE782D00EB767C /* Override_C++.mm */; };
 		554BE3BD1EBE7DDC00EB767C /* libOverride_iOS.a in CopyFiles */ = {isa = PBXBuildFile; fileRef = 552856321EBE63180043CD02 /* libOverride_iOS.a */; };
 		55526F331EBFF1D300A02158 /* Override_iOS.m in Sources */ = {isa = PBXBuildFile; fileRef = 552856371EBE63190043CD02 /* Override_iOS.m */; };
+		559CA6E91EC27F1800492DC3 /* DeepLink.m in Sources */ = {isa = PBXBuildFile; fileRef = 559CA6E81EC27F1800492DC3 /* DeepLink.m */; };
+		559CA6EC1EC281EF00492DC3 /* DeepLink_C++.mm in Sources */ = {isa = PBXBuildFile; fileRef = 559CA6EB1EC281EF00492DC3 /* DeepLink_C++.mm */; };
 		55D086B31EC1EFEC00974E70 /* EPPZSwizzler.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D086B11EC1EFEC00974E70 /* EPPZSwizzler.m */; };
 		55D086B61EC1F54700974E70 /* OverrideAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 55D086B51EC1F54700974E70 /* OverrideAppDelegate.m */; };
 /* End PBXBuildFile section */
@@ -55,7 +56,9 @@
 		552856351EBE63190043CD02 /* Override_iOS.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Override_iOS.h; sourceTree = "<group>"; };
 		552856371EBE63190043CD02 /* Override_iOS.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = Override_iOS.m; sourceTree = "<group>"; };
 		554BE3B61EBE779F00EB767C /* UnityString_C++.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "UnityString_C++.mm"; sourceTree = "<group>"; };
-		554BE3B91EBE782D00EB767C /* Override_C++.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "Override_C++.mm"; sourceTree = "<group>"; };
+		559CA6E71EC27F1800492DC3 /* DeepLink.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = DeepLink.h; sourceTree = "<group>"; };
+		559CA6E81EC27F1800492DC3 /* DeepLink.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DeepLink.m; sourceTree = "<group>"; };
+		559CA6EB1EC281EF00492DC3 /* DeepLink_C++.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; path = "DeepLink_C++.mm"; sourceTree = "<group>"; };
 		55D086B11EC1EFEC00974E70 /* EPPZSwizzler.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = EPPZSwizzler.m; sourceTree = "<group>"; };
 		55D086B21EC1EFEC00974E70 /* EPPZSwizzler.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = EPPZSwizzler.h; sourceTree = "<group>"; };
 		55D086B41EC1F54700974E70 /* OverrideAppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = OverrideAppDelegate.h; sourceTree = "<group>"; };
@@ -95,10 +98,12 @@
 				55D086AD1EC1EFBF00974E70 /* eppz! swizzler */,
 				552856351EBE63190043CD02 /* Override_iOS.h */,
 				552856371EBE63190043CD02 /* Override_iOS.m */,
-				554BE3B91EBE782D00EB767C /* Override_C++.mm */,
 				554BE3B61EBE779F00EB767C /* UnityString_C++.mm */,
 				55D086B41EC1F54700974E70 /* OverrideAppDelegate.h */,
 				55D086B51EC1F54700974E70 /* OverrideAppDelegate.m */,
+				559CA6E71EC27F1800492DC3 /* DeepLink.h */,
+				559CA6E81EC27F1800492DC3 /* DeepLink.m */,
+				559CA6EB1EC281EF00492DC3 /* DeepLink_C++.mm */,
 			);
 			path = Override_iOS;
 			sourceTree = "<group>";
@@ -171,10 +176,11 @@
 			buildActionMask = 2147483647;
 			files = (
 				55526F331EBFF1D300A02158 /* Override_iOS.m in Sources */,
+				559CA6E91EC27F1800492DC3 /* DeepLink.m in Sources */,
 				554BE3B71EBE779F00EB767C /* UnityString_C++.mm in Sources */,
 				55D086B31EC1EFEC00974E70 /* EPPZSwizzler.m in Sources */,
 				55D086B61EC1F54700974E70 /* OverrideAppDelegate.m in Sources */,
-				554BE3BB1EBE782D00EB767C /* Override_C++.mm in Sources */,
+				559CA6EC1EC281EF00492DC3 /* DeepLink_C++.mm in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

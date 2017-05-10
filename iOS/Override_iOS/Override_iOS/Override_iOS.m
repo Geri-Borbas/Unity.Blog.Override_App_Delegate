@@ -14,10 +14,6 @@
 #import "Override_iOS.h"
 
 
-__strong Override_iOS *_instance;
-
-
-
 @implementation Override_iOS
 
 
@@ -25,18 +21,11 @@ __strong Override_iOS *_instance;
 {
     NSLog(@"[Override_iOS load]");
     [self swizzle];
-    
-    _instance = [Override_iOS new];
-    _instance.URL = @"Greetings from iOS!";
 }
-
-+(Override_iOS*)instance
-{ return _instance; }
 
 +(void)swizzle
 {
     NSLog(@"[Override_iOS swizzle]");
-    
     [self replaceAppDelegateMethod:@selector(application:didFinishLaunchingWithOptions:)
                          fromClass:OverrideAppDelegate.class
                   savingOriginalTo:@selector(_original_saved_by_Override_application:didFinishLaunchingWithOptions:)];
