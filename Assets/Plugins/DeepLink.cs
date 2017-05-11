@@ -34,12 +34,9 @@ public class DeepLink : MonoBehaviour
 	[DllImport("__Internal")]
 	static extern string DeepLink_GetSourceApplication();		
 
-
-	void OnApplicationFocus(bool focused)	
+	void Update()	
     {
-		if (focused == false) return; // Only if application has focused
         if (DeepLink_GetURL() == "") return; // Only having any URL passed
-
 		label.text = DeepLink_GetURL().Replace("override://", ""); // Expose to UI
 		DeepLink_Reset(); // Mark the data consumed
     }
