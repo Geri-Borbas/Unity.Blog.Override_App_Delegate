@@ -27,7 +27,7 @@
 			<string>Editor</string>
 			<key>CFBundleURLSchemes</key>
 			<array>
-				<string>override_sandbox</string>
+				<string>overridesandbox</string>
 			</array>
 		</dict>
 	</array>
