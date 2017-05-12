@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2016 eppz! mobile, Gergely Borbás (SP)
 //
 // http://www.twitter.com/_eppz
@@ -11,38 +11,25 @@
 // OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.
 //
 
-using UnityEngine;
-using UnityEngine.UI;
-using System.Runtime.InteropServices;
+#import "OverrideAppDelegate.h"
 
 
-public class DeepLink : MonoBehaviour
+@implementation OverrideAppDelegate
+
+
+#pragma mark Override implementations
+
+-(void)applicationDidFinishLaunching:(NSNotification*) notification
 {
-
-
-	public Text label;
-
-
-#if !UNITY_EDITOR && (UNITY_IOS || UNITY_STANDALONE_OSX)
-
-	[DllImport("__Internal")]
-	static extern void DeepLink_Reset();
-
-	[DllImport("__Internal")]
-	static extern string DeepLink_GetURL();	
-
-	[DllImport("__Internal")]
-	static extern string DeepLink_GetSourceApplication();		
-
-
-	void Update()	
-    {
-        if (DeepLink_GetURL() == "") return;
-		label.text = DeepLink_GetURL().Replace("override://", "");
-		DeepLink_Reset();
-    }
-
-#endif
-
-
+    NSLog(@"[OverrideAppDelegate applicationDidFinishLaunching:%@]", notification);
+    return [self _original_saved_by_Override_applicationDidFinishLaunching:notification];
 }
+
+
+#pragma mark Original implementation placeholders
+
+-(void)_original_saved_by_Override_applicationDidFinishLaunching:(NSNotification*) notification
+{ return; }
+
+
+@end

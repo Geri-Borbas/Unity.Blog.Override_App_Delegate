@@ -39,6 +39,25 @@ public class BuildPostProcessor
 			// Write.
 			File.WriteAllText(projectPath, project.WriteToString());
 		}
+
+		if (target == BuildTarget.StandaloneOSXIntel ||
+			target == BuildTarget.StandaloneOSXIntel64 ||
+			target == BuildTarget.StandaloneOSXUniversal)
+		{
+			// Read.
+            string plistDocumentPath = path + "/Contents/Info.plist";
+            PlistDocument plistDocument = new PlistDocument();
+            plistDocument.ReadFromString(File.ReadAllText(plistDocumentPath));
+            PlistElementDict rootElement = plistDocument.root;
+       
+            // Add scheme.
+            PlistElementDict urlSchemeArrayElement = rootElement.CreateArray("CFBundleURLTypes").AddDict();
+			urlSchemeArrayElement.SetString("CFBundleURLName", "");
+			urlSchemeArrayElement.CreateArray("CFBundleURLSchemes").AddString("override");
+
+            // Write.
+            File.WriteAllText(plistDocumentPath, plistDocument.WriteToString());
+		}
 	}
 
 	static void AddFrameworks(PBXProject project, string target)
