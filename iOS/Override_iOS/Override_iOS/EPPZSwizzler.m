@@ -247,7 +247,7 @@ static char associationKeyKey;
                     withPolicy:(EPPZSwizzlerProperryAssociationPolicy) policy
 {
     // Get type encoding.
-    const char *typeEncoding = @encode(typeof(kind));
+    const char *typeEncoding = @encode(__typeof__(kind));
     
     // Associate the key for the property to the class itself.
     NSString *keyObject = [NSString stringWithFormat:@"%@Key", propertyName];
