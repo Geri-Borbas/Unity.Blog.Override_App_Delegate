@@ -1,4 +1,4 @@
-﻿//
+//
 // Copyright (c) 2016 eppz! mobile, Gergely Borbás (SP)
 //
 // http://www.twitter.com/_eppz
@@ -14,14 +14,15 @@
 using UnityEngine;
 using UnityEngine.UI;
 using System.Runtime.InteropServices;
-
+using UnityEngine.Events;
 
 public class DeepLink : MonoBehaviour
 {
 
-
-	public Text label;
-
+    public static string LastURL;
+    [System.Serializable]
+    public class StringEvent : UnityEvent<string> { }
+    public StringEvent urlOpenedEvent;
 
 #if !UNITY_EDITOR && (UNITY_IOS || UNITY_STANDALONE_OSX)
 
@@ -35,11 +36,16 @@ public class DeepLink : MonoBehaviour
 	static extern string DeepLink_GetSourceApplication();		
 
 
-	void Update()	
+	void OnEnable()	
     {
         if (DeepLink_GetURL() == "") return;
-		label.text = DeepLink_GetURL().Replace("override://", "");
+		LastURL = DeepLink_GetURL();
+
+        urlOpenedEvent.Invoke(url);
+
 		DeepLink_Reset();
+
+
     }
 
 #endif
